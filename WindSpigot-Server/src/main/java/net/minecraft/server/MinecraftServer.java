@@ -1688,7 +1688,7 @@ public abstract class MinecraftServer extends ReentrantIAsyncHandler<TasksPerTic
 			try {
 				return Futures.immediateFuture(callable.call());
 			} catch (Exception exception) {
-				return Futures.immediateFailedCheckedFuture(exception);
+				return Futures.immediateFailedFuture(exception);
 			}
 		}
 	}

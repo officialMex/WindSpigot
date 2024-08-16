@@ -181,7 +181,7 @@
 		</repository>
 	</repositories>
 
-	<!-- This builds a completely 'ready to start' jar with all dependencies 
+	<!-- This builds a completely 'ready to start' jar with all dependencies
 		inside -->
 	<build>
 		<finalName>WindSpigot-Server</finalName>
@@ -247,6 +247,12 @@
 									<artifact>org.spigotmc:minecraft-server:**</artifact>
 									<excludes>
 										<exclude>org/apache/logging/log4j/**</exclude>
+									</excludes>
+								</filter>
+								<filter>
+									<artifact>org.spigotmc:minecraft-server:**</artifact>
+									<excludes>
+										<exclude>com/google/common/**</exclude>
 									</excludes>
 								</filter>
 							</filters>

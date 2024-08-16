@@ -3,6 +3,7 @@ package net.minecraft.server;
 import java.util.Iterator;
 import java.util.Random;
 
+import com.google.common.base.MoreObjects;
 import org.bukkit.event.block.BlockRedstoneEvent; // CraftBukkit
 
 import com.google.common.base.Objects;
@@ -133,7 +134,7 @@ public class BlockTripwireHook extends Block {
 				flag5 = false;
 			} else {
 				if (k == i) {
-					iblockdata2 = Objects.firstNonNull(iblockdata1, iblockdata2);
+					iblockdata2 = MoreObjects.firstNonNull(iblockdata1, iblockdata2);
 				}
 
 				boolean flag7 = !iblockdata2.get(BlockTripwire.DISARMED).booleanValue();

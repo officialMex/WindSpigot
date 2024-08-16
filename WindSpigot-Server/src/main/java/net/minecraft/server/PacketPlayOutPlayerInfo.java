@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Iterator;
 import java.util.List;
 
+import com.google.common.base.MoreObjects;
 import com.google.common.base.Objects;
 import com.google.common.collect.Lists;
 import com.mojang.authlib.GameProfile;
@@ -181,7 +182,7 @@ public class PacketPlayOutPlayerInfo implements Packet<PacketListenerPlayOut> {
 
 	@Override
 	public String toString() {
-		return Objects.toStringHelper(this).add("action", this.a).add("entries", this.b).toString();
+		return MoreObjects.toStringHelper(this).add("action", this.a).add("entries", this.b).toString();
 	}
 
 	public class PlayerInfoData {
@@ -215,7 +216,7 @@ public class PacketPlayOutPlayerInfo implements Packet<PacketListenerPlayOut> {
 
 		@Override
 		public String toString() {
-			return Objects.toStringHelper(this).add("latency", this.b).add("gameMode", this.c).add("profile", this.d)
+			return MoreObjects.toStringHelper(this).add("latency", this.b).add("gameMode", this.c).add("profile", this.d)
 					.add("displayName", this.e == null ? null : ChatSerializer.a(this.e)).toString();
 		}
 	}
